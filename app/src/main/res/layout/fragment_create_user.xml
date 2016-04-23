@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="iakupn.iakupn2016.ui.fragments.CreateUserFragment">
+
+    <EditText
+        android:id="@+id/person_name"
+        android:hint="name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/person_address"
+        android:hint="address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/person_age"
+        android:hint="age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/person_is_married"
+        android:hint="0 if not married yet, 1 if already married"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/save_btn"
+        android:text="Simpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
