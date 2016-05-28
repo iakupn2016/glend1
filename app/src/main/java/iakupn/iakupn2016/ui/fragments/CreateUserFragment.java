@@ -30,8 +30,8 @@ public class CreateUserFragment extends Fragment {
     private EditText personIsMarried;
     private Button saveBtn;
 
-    private SQLiteDatabase db;
-    private DbHelper dbHelper;
+//    private SQLiteDatabase db;
+//    private DbHelper dbHelper;
 
     public CreateUserFragment() {
         // Required empty public constructor
@@ -47,8 +47,8 @@ public class CreateUserFragment extends Fragment {
 
         Log.d("TAG", "username " + username + ". Age " + age);
 
-        dbHelper = new DbHelper(getActivity());
-        db = dbHelper.getWritableDatabase();
+//        dbHelper = new DbHelper(getActivity());
+//        db = dbHelper.getWritableDatabase();
 
         queryToDb();
     }
@@ -96,7 +96,7 @@ public class CreateUserFragment extends Fragment {
         values.put(DbSchema.COLUMN_PERSON_AGE, personAge.getText().toString());
         values.put(DbSchema.COLUMN_PERSON_IS_MARRIED, personIsMarried.getText().toString());
 
-        db.insert(DbSchema.PERSON_TABLE_NAME, null, values);
+//        db.insert(DbSchema.PERSON_TABLE_NAME, null, values);
     }
 
     private void queryToDb() {
@@ -115,16 +115,16 @@ public class CreateUserFragment extends Fragment {
                 String.valueOf(1)
         };
 
-        Cursor cursor = db.query(DbSchema.PERSON_TABLE_NAME, projection, selection,
-                selectionArgs, null, null, null);
-
-        if (cursor != null) {
-            while (cursor.moveToNext()) {
-                Log.d("TAG", "Nama saya "
-                        + cursor.getString(0) + ". Alamat saya "
-                        + cursor.getString(1) + ". Umur saya " + cursor.getInt(2));
-            }
-        }
+////        Cursor cursor = db.query(DbSchema.PERSON_TABLE_NAME, projection, selection,
+////                selectionArgs, null, null, null);
+//
+//        if (cursor != null) {
+//            while (cursor.moveToNext()) {
+//                Log.d("TAG", "Nama saya "
+//                        + cursor.getString(0) + ". Alamat saya "
+//                        + cursor.getString(1) + ". Umur saya " + cursor.getInt(2));
+//            }
+//        }
     }
 
     public interface OnCreateUserInteraction {
